@@ -39,7 +39,8 @@ public class UserController {
 
         if (param.getFieldMap().containsKey("password")){
             String password = (String) param.getFieldMap().get("password");
-            User user = userService.login(MD5Util.getMd5(password));
+            User user = userService.login(password);
+            //User user = userService.login(MD5Util.getMd5(password));
 
             if (user != null){
                 ServletCore.setSessionAttribute("user", user);
@@ -77,7 +78,8 @@ public class UserController {
         if (param.getFieldMap().containsKey("password")){
             password = (String) param.getFieldMap().get("password");
         }
-        userService.updateUser(username, MD5Util.getMd5(password));
+        //userService.updateUser(username, MD5Util.getMd5(password));
+        userService.updateUser(username, password);
         User user = new User();
         user.setUserName(username);
         user.setPassword(password);

@@ -144,7 +144,7 @@ public class UserService {
             ResultSet rs = stat.executeQuery(sql);
             while( rs.next()){
                 Part part = new Part();
-                part.setPartId(rs.getString("SUBPART_ID"));
+                part.setPartId(rs.getString("PART_ID"));
 
                 part.setPartName(rs.getString("PART_NAME"));
                 part.setPartRemark(rs.getString("PART_REMARK"));
