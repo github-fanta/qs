@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qs">
+    <output-path>C:/qs</output-path>
+    <root id="archive" name="qs.war">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>
